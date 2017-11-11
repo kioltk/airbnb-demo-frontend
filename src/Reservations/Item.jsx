@@ -6,7 +6,7 @@ const Image = styled.img`
   display: block;
   width: 100%;
 `;
-const Category = styled.div`
+const Category = styled.p`
   margin-top: 12px;
   margin-bottom: 6px;
   font-weight: bold;
@@ -15,14 +15,14 @@ const Category = styled.div`
   text-transform: uppercase;
 `;
 
-const Title = styled.div`
+const Title = styled.p`
   margin-top: 2px;
   margin-bottom: 6px;
   font-weight: bold;
   overflow: hidden;
   font-size: 18px;
 `;
-const Price = styled.div`
+const Price = styled.p`
   font-size: 18px;
   margin-top: 4px;
   font-weight: lighter;

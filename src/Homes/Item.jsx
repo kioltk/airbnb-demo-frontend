@@ -7,7 +7,7 @@ const Image = styled.img`
   display: block;
   width: 100%;
 `;
-const Title = styled.div`
+const Title = styled.p`
   margin-top: 8px;
   margin-bottom: 6px;
   text-overflow: ellipsis;
@@ -16,7 +16,7 @@ const Title = styled.div`
   font-weight: bold;
 `;
 
-const Description = styled.div`
+const Description = styled.p`
   margin-top: 8px;
   margin-bottom: 6px;
   text-overflow: ellipsis;
@@ -26,6 +26,7 @@ const Description = styled.div`
 `;
 const Price = styled.span``;
 const ReviewsCounter = styled.span`margin-left: 4px;`;
+const Rating = styled.p`margin: 0;`;
 export default ({ home, ...props }) => (
   <Item href="#" className={props.className}>
     <Image src={home.image} />
@@ -36,9 +37,11 @@ export default ({ home, ...props }) => (
     <Description>
       {home.type} · {home.bedsCounter} {home.bedsCounter === 1 ? 'bed' : 'beds'}
     </Description>
-    <Stars stars={home.stars} />
-    <ReviewsCounter>
-      {home.reviewsCounter} {home.isSuperhost ? '· Superhost' : 'reviews'}
-    </ReviewsCounter>
+    <Rating>
+      <Stars stars={home.stars} />
+      <ReviewsCounter>
+        {home.reviewsCounter} {home.isSuperhost ? '· Superhost' : 'reviews'}
+      </ReviewsCounter>
+    </Rating>
   </Item>
 );

@@ -31,12 +31,12 @@ const SeeAll = styled.a`
 export default props => (
   <Box>
     <Title className="col-xs">
-      {props.children}
       {props.link && (
         <SeeAll className="col-xs" href={props.link}>
           See all
         </SeeAll>
       )}
+      {props.children}
     </Title>
   </Box>
 );
