@@ -14,7 +14,7 @@ const Title = styled.p`
   font-size: 18px;
 `;
 export default ({ destination, ...props }) => (
-  <Card href="#" className={props.className}>
+  <Card href="/" className={props.className}>
     <Image src={destination.image} />
     <Title>{destination.title}</Title>
   </Card>

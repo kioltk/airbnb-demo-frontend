@@ -29,18 +29,19 @@ const Slider = styled.div`
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
+  /* Uncomment this if you want to disable scrollbar on mobile */
+  /*-webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   &::-webkit-scrollbar {
     -webkit-appearance: none;
     display: none;
-  }
+  }*/
 `;
 
 const Container = styled.div`position: relative;`;
 export default props => (
   <Container>
     <Slider>{props.children}</Slider>
-    {props.paginationEnabled && <Next href="#" />}
+    {props.paginationEnabled && <Next href="/" />}
   </Container>
 );

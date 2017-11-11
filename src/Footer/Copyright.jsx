@@ -63,16 +63,16 @@ export default () => (
       <span>© Airbnb Inc.</span>
     </Copyright>
     <Links className="col-xs">
-      <Link href="#">Terms</Link>
-      <Link href="#">Privacy</Link>
-      <Link href="#">Site map</Link>
-      <a href="#">
+      <Link href="/">Terms</Link>
+      <Link href="/">Privacy</Link>
+      <Link href="/">Site map</Link>
+      <a href="/">
         <Social src={facebook} />
       </a>
-      <a href="#">
+      <a href="/">
         <Social src={twitter} />
       </a>
-      <a href="#">
+      <a href="/">
         <Instagram src={instagram} />
       </a>
     </Links>

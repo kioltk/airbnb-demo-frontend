@@ -16,7 +16,7 @@ const Price = styled.span`font-weight: bold;`;
 const ReviewsCounter = styled.span`margin-left: 4px;`;
 const Rating = styled.p`margin: 0;`;
 export default ({ experience, ...props }) => (
-  <Card href="#" className={props.className}>
+  <Card href="/" className={props.className}>
     <Image src={experience.image} />
     <Title>
       <Price>${experience.price} </Price>

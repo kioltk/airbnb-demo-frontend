@@ -27,7 +27,7 @@ const Box = styled.div`
 
 export default props => (
   <Box className={props.className}>
-    <Link href="#">
+    <Link href="/">
       <Logo src={appLogo} />
     </Link>
   </Box>

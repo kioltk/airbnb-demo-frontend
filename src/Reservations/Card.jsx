@@ -29,7 +29,7 @@ const Price = styled.p`
   opacity: 0.9;
 `;
 export default ({ reservation, ...props }) => (
-  <Card href="#" className={props.className}>
+  <Card href="/" className={props.className}>
     <Image src={reservation.image} />
     <Category>{reservation.category}</Category>
     <Title>{reservation.title}</Title>

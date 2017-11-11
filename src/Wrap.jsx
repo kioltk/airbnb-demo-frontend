@@ -7,8 +7,8 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 8px;
-  padding-left: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
   ${Media.md`
     padding-right: 16px;
     padding-left: 16px

@@ -36,7 +36,7 @@ export default props => (
     <List>
       {actions.map(action => (
         <LinkBox>
-          <Link href="#">{action}</Link>
+          <Link href="/">{action}</Link>
         </LinkBox>
       ))}
     </List>
