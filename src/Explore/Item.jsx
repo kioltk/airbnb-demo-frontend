@@ -4,7 +4,7 @@ import Media from './../Media';
 
 const Link = styled.a``;
 const Box = styled.div`
-  border: 0.4px solid rgba(72, 72, 72, 0.2);
+  border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -12,7 +12,7 @@ const Box = styled.div`
 
   ${Media.sm`
     display: flex;
-    border: 0.4px solid rgba(72, 72, 72, 0.2);
+    border: 1px solid rgba(72, 72, 72, 0.2);
     box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
     -webkit-border-radius: 4px;
     align-items: center;
