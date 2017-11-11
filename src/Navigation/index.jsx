@@ -5,7 +5,7 @@ import Search from './Search';
 import Actions from './Actions';
 import Wrap from './../Wrap';
 
-const Header = styled.div`
+const Navigation = styled.nav`
   background: white;
   top: 0;
   z-index: 100;
@@ -24,7 +24,7 @@ const HeaderOffset = styled.div`height: 100px;`;
 
 export default () => (
   <div>
-    <Header>
+    <Navigation>
       <Wrap>
         <Box>
           <Logo className="col-md-1 col-xs-2" />
@@ -32,7 +32,7 @@ export default () => (
           <Actions className="col-md-5 col-md-offset-1 hidden-sm hidden-xs" />
         </Box>
       </Wrap>
-    </Header>
+    </Navigation>
     <HeaderOffset />
   </div>
 );

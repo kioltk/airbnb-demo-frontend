@@ -26,22 +26,19 @@ const Description = styled.div`
 `;
 const Price = styled.span``;
 const ReviewsCounter = styled.span`margin-left: 4px;`;
-export default (props) => {
-  const home = props.home;
-  return (
-    <Item href="#" className={props.className}>
-      <Image src={home.image} />
-      <Title>
-        <Price>{home.price} </Price>
-        {home.title}
-      </Title>
-      <Description>
-        {home.type} · {home.bedsCounter} {home.bedsCounter === 1 ? 'bed' : 'beds'}
-      </Description>
-      <Stars stars={home.stars} />
-      <ReviewsCounter>
-        {home.reviewsCounter} {home.isSuperhost ? '· Superhost' : 'reviews'}
-      </ReviewsCounter>
-    </Item>
-  );
-};
+export default ({ home, ...props }) => (
+  <Item href="#" className={props.className}>
+    <Image src={home.image} />
+    <Title>
+      <Price>${home.price} </Price>
+      {home.title}
+    </Title>
+    <Description>
+      {home.type} · {home.bedsCounter} {home.bedsCounter === 1 ? 'bed' : 'beds'}
+    </Description>
+    <Stars stars={home.stars} />
+    <ReviewsCounter>
+      {home.reviewsCounter} {home.isSuperhost ? '· Superhost' : 'reviews'}
+    </ReviewsCounter>
+  </Item>
+);

@@ -14,14 +14,14 @@ const Title = styled.div`
 `;
 const Price = styled.span`font-weight: bold;`;
 const ReviewsCounter = styled.span`margin-left: 4px;`;
-export default props => (
+export default ({ experience, ...props }) => (
   <Item href="#" className={props.className}>
-    <Image src={props.imageSrc} />
+    <Image src={experience.image} />
     <Title>
-      <Price>{props.price} </Price>
-      {props.title}
+      <Price>${experience.price} </Price>
+      {experience.title}
     </Title>
-    <Stars stars={props.stars} />
-    <ReviewsCounter>{props.reviewsCounter} reviews</ReviewsCounter>
+    <Stars stars={experience.stars} />
+    <ReviewsCounter>{experience.reviewsCounter} reviews</ReviewsCounter>
   </Item>
 );

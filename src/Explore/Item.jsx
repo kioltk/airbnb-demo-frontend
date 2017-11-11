@@ -42,15 +42,11 @@ const Text = styled.div`
     vertical-align: middle;
   `};
 `;
-export default (props) => {
-  const explore = props.explore;
-
-  return (
-    <Link href={explore.link} className={props.className}>
-      <Box>
-        <Image src={explore.picture} />
-        <Text>{explore.title}</Text>
-      </Box>
-    </Link>
-  );
-};
+export default ({ explore, ...props }) => (
+  <Link href={explore.link} className={props.className}>
+    <Box>
+      <Image src={explore.picture} />
+      <Text>{explore.title}</Text>
+    </Box>
+  </Link>
+);

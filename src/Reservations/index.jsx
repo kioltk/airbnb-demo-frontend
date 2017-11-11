@@ -11,25 +11,25 @@ import Slider from './../Slider';
 const items = [
   {
     image: speakeasy,
-    price: '$60',
+    price: 60,
     category: 'Speakeasy',
     title: 'Chumley’s',
   },
   {
     image: korean,
-    price: '$50',
+    price: 50,
     category: 'Korean gastropub',
     title: 'Hanjan',
   },
   {
     image: german,
-    price: '$55',
+    price: 55,
     category: 'German american',
     title: 'Prime Meats',
   },
   {
     image: seafood,
-    price: '$70',
+    price: 70,
     category: 'Fine seafood',
     title: 'Seaprice',
   },

@@ -28,14 +28,11 @@ const Price = styled.div`
   font-weight: lighter;
   opacity: 0.9;
 `;
-export default (props) => {
-  const reservation = props.reservation;
-  return (
-    <Item href="#" className={props.className}>
-      <Image src={reservation.image} />
-      <Category>{reservation.category}</Category>
-      <Title>{reservation.title}</Title>
-      <Price>About {reservation.price} per person</Price>
-    </Item>
-  );
-};
+export default ({ reservation, ...props }) => (
+  <Item href="#" className={props.className}>
+    <Image src={reservation.image} />
+    <Category>{reservation.category}</Category>
+    <Title>{reservation.title}</Title>
+    <Price>About ${reservation.price} per person</Price>
+  </Item>
+);

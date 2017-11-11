@@ -9,13 +9,13 @@ const Box = styled.div`
     display: flex;
     `};
 `;
-const List = styled.ul`
+const List = styled.div`
   vertical-align: middle;
   display: flex;
   justify-content: flex-end;
   width: 100%;
 `;
-const Item = styled.li`display: inline;`;
+const Item = styled.div`display: inline;`;
 const Link = styled.a`
   line-height: 24px;
   font-size: 14px;

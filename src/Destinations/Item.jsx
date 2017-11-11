@@ -13,12 +13,9 @@ const Title = styled.div`
   overflow: hidden;
   font-size: 18px;
 `;
-export default (props) => {
-  const destination = props.destination;
-  return (
-    <Item href="#" className={props.className}>
-      <Image src={destination.image} />
-      <Title>{destination.title}</Title>
-    </Item>
-  );
-};
+export default ({ destination, ...props }) => (
+  <Item href="#" className={props.className}>
+    <Image src={destination.image} />
+    <Title>{destination.title}</Title>
+  </Item>
+);
