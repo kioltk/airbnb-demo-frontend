@@ -27,9 +27,14 @@ const Next = styled.a`
 const Slider = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+  }
 `;
 
 const Container = styled.div`position: relative;`;
