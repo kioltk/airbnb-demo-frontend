@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import searchIcon from "./searchIcon.svg";
-import Adaptive from "./../Adaptive";
+import React from 'react';
+import styled from 'styled-components';
+import searchIcon from './search-icon.svg';
+import Media from './../Media';
 
 const SearchField = styled.input`
   vertical-align: middle;
@@ -28,14 +28,12 @@ const SearchBox = styled.div`
   position: relative;
   display: inline-block;
 
-  ${Adaptive.phone`display:100%;`};
+  ${Media.xs`display:100%;`};
 `;
 
-export default props => {
-  return (
-    <SearchBox className={props.className}>
-      <SearchLogo src={searchIcon} />
-      <SearchField placeholder="Try &quot;Miami&quot;" />
-    </SearchBox>
-  );
-};
+export default props => (
+  <SearchBox className={props.className}>
+    <SearchLogo src={searchIcon} />
+    <SearchField placeholder="Try &quot;Miami&quot;" />
+  </SearchBox>
+);

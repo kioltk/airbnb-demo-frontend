@@ -1,14 +1,26 @@
-import React, { Component } from "react";
-import "./App.css";
-import "normalize.css";
-import Header from "./ui/header/Header";
-import "flexboxgrid2";
+import 'normalize.css';
+import 'flexboxgrid2';
+import React, { Component } from 'react';
+import './App.css';
+import Navigation from './Navigation';
+import Explore from './Explore';
+import Experiences from './Experiences';
+import Homes from './Homes';
+import Reservations from './Reservations';
+import Destinations from './Destinations';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Navigation />
+        <Explore />
+        <Experiences />
+        <Homes />
+        <Reservations />
+        <Destinations />
+        <Footer />
       </div>
     );
   }

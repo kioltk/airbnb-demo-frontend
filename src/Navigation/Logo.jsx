@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import appLogo from "./appLogo.svg";
 import arrow from "./arrow.svg";
-import Adaptive from "./../Adaptive";
+import Media from "./../Media";
 
 const Logo = styled.img`
   width: 30px;
@@ -11,13 +11,13 @@ const Logo = styled.img`
 `;
 const Link = styled.a`
   &:after {
-    display: none;
+    display: inline-block;
     width: 10px;
     height: 10px;
     content: " ";
     background: url(${arrow}) no-repeat;
   }
-  ${Adaptive.tablet`&:after{display: inline-block;}`};
+  ${Media.md`&:after{display: none;}`};
 `;
 const Box = styled.div`
   display: flex;
