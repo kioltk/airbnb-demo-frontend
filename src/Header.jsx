@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import arrow from './arrow.svg';
 
-const Box = styled.div`display: flex;`;
+const Box = styled.div`
+  display: flex;
+  align-items: center;
+`;
 const Title = styled.h2`
   line-height: 34px;
   font-size: 32px;
@@ -10,15 +13,14 @@ const Title = styled.h2`
   margin-top: 48px;
 `;
 const SeeAll = styled.a`
-  float: right;
   height: 100%;
-  line-height: 34px;
   font-weight: normal;
   font-size: 14px;
   vertical-align:middle;
   color: #383838;
   display: flex;
   align-items: center;
+  margin-top: 20px;
   &:after {
     display: inline-block;
     margin-left:8px;
@@ -31,13 +33,7 @@ const SeeAll = styled.a`
 
 export default props => (
   <Box>
-    <Title className="col-xs">
-      {props.link && (
-        <SeeAll className="col-xs" href={props.link}>
-          See all
-        </SeeAll>
-      )}
-      {props.children}
-    </Title>
+    <Title className="col-xs">{props.children}</Title>
+    {props.link && <SeeAll href={props.link}>See all</SeeAll>}
   </Box>
 );
