@@ -10,7 +10,7 @@ import Slider from './../Slider';
 const items = [
   {
     image: salentina,
-    price: '$82',
+    price: 82,
     type: 'Entire house',
     bedsCounter: 9,
     isSuperhost: true,
@@ -20,7 +20,7 @@ const items = [
   },
   {
     image: bedroom,
-    price: '$82',
+    price: 82,
     type: 'Entire house',
     bedsCounter: 5,
     isSuperhost: true,
@@ -30,7 +30,7 @@ const items = [
   },
   {
     image: dreamy,
-    price: '$200',
+    price: 200,
     stars: 5,
     type: 'Entire house',
     bedsCounter: 1,

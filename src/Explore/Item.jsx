@@ -6,7 +6,6 @@ const Link = styled.a``;
 const Box = styled.div`
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   align-items: center;
 
@@ -14,7 +13,6 @@ const Box = styled.div`
     display: flex;
     border: 1px solid rgba(72, 72, 72, 0.2);
     box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
-    -webkit-border-radius: 4px;
     align-items: center;
   `};
 `;
