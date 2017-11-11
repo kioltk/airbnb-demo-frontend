@@ -31,15 +31,14 @@ const Link = styled.a`
 
 const actions = ['Become a host', 'Help', 'Sign Up', 'Login In'];
 
-export default (props) => {
-  const items = actions.map(action => (
-    <Item>
-      <Link href="#">{action}</Link>
-    </Item>
-  ));
-  return (
-    <Box className={props.className}>
-      <List>{items}</List>
-    </Box>
-  );
-};
+export default props => (
+  <Box className={props.className}>
+    <List>
+      {actions.map(action => (
+        <Item>
+          <Link href="#">{action}</Link>
+        </Item>
+      ))}
+    </List>
+  </Box>
+);

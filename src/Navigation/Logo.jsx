@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import appLogo from "./appLogo.svg";
-import arrow from "./arrow.svg";
-import Media from "./../Media";
+import React from 'react';
+import styled from 'styled-components';
+import appLogo from './appLogo.svg';
+import arrow from './arrow.svg';
+import Media from './../Media';
 
 const Logo = styled.img`
   width: 30px;
@@ -14,7 +14,7 @@ const Link = styled.a`
     display: inline-block;
     width: 10px;
     height: 10px;
-    content: " ";
+    content: ' ';
     background: url(${arrow}) no-repeat;
   }
   ${Media.md`&:after{display: none;}`};
@@ -25,12 +25,10 @@ const Box = styled.div`
   justify-content: center;
 `;
 
-export default props => {
-  return (
-    <Box className={props.className}>
-      <Link href="#">
-        <Logo src={appLogo} />
-      </Link>
-    </Box>
-  );
-};
+export default props => (
+  <Box className={props.className}>
+    <Link href="#">
+      <Logo src={appLogo} />
+    </Link>
+  </Box>
+);

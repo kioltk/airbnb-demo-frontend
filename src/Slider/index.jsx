@@ -38,12 +38,9 @@ const Slider = styled.div`
 `;
 
 const Container = styled.div`position: relative;`;
-export default (props) => {
-  const paginationButton = props.paginationEnabled ? <Next href="#" /> : '';
-  return (
-    <Container>
-      <Slider>{props.children}</Slider>
-      {paginationButton}
-    </Container>
-  );
-};
+export default props => (
+  <Container>
+    <Slider>{props.children}</Slider>
+    {props.paginationEnabled && <Next href="#" />}
+  </Container>
+);

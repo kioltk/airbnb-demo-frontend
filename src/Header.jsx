@@ -28,20 +28,15 @@ const SeeAll = styled.a`
   }
 `;
 
-export default (props) => {
-  const seeAllLink = props.link ? (
-    <SeeAll className="col-xs" href={props.link}>
-      See all
-    </SeeAll>
-  ) : (
-    ''
-  );
-  return (
-    <Box>
-      <Title className="col-xs">
-        {seeAllLink}
-        {props.children}
-      </Title>
-    </Box>
-  );
-};
+export default props => (
+  <Box>
+    <Title className="col-xs">
+      {seeAllLink}
+      {props.link && (
+        <SeeAll className="col-xs" href={props.link}>
+          See all
+        </SeeAll>
+      )}
+    </Title>
+  </Box>
+);

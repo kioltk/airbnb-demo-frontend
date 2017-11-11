@@ -18,16 +18,15 @@ const Title = styled.li`
 
 export default (props) => {
   const list = props.list;
-  const items = list.items.map(item => (
-    <Item>
-      <Link href="#{item.text}">{item.title}</Link>
-    </Item>
-  ));
   return (
     <Box className={props.className}>
       <List>
         <Title>{list.title}</Title>
-        {items}
+        {list.items.map(item => (
+          <Item>
+            <Link href={item.link}>{item.title}</Link>
+          </Item>
+        ))}
       </List>
     </Box>
   );

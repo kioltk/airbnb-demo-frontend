@@ -7,21 +7,17 @@ import Header from './../Header';
 import Slider from './../Slider';
 import Item from './Item';
 
-export default () => {
-  const items = [
-    { picture: homes, title: 'Homes' },
-    { picture: experiences, title: 'Experiences' },
-    { picture: restaurants, title: 'Restaurants' },
-  ];
+const items = [
+  { picture: homes, title: 'Homes' },
+  { picture: experiences, title: 'Experiences' },
+  { picture: restaurants, title: 'Restaurants' },
+];
 
-  return (
-    <div>
-      <Wrap>
-        <Header>Explore Aribnb</Header>
-        <Slider>
-          {items.map(item => <Item explore={item} className="col-md-4 col-sm-5 col-xs-6" />)}
-        </Slider>
-      </Wrap>
-    </div>
-  );
-};
+export default () => (
+  <Wrap>
+    <Header>Explore Aribnb</Header>
+    <Slider>
+      {items.map(item => <Item explore={item} className="col-md-4 col-sm-5 col-xs-6" />)}
+    </Slider>
+  </Wrap>
+);

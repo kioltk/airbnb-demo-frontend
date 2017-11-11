@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import Search from './Search';
 import Actions from './Actions';
-// import Media from "./../Media";
 import Wrap from './../Wrap';
 
 const Header = styled.div`
