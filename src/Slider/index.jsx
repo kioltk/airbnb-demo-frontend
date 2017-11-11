@@ -6,7 +6,7 @@ import Media from './../Media';
 const Next = styled.a`
   position: absolute;
   top: calc(50% - 60px);
-  right: -15px;
+  right: -10px;
   height: 40px;
   width: 40px;
   background-color: #fff;
