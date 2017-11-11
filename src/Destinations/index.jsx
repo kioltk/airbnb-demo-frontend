@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrap from './../Wrap';
-import Item from './Item';
+import Card from './Card';
 import miami from './miami.png';
 import paris from './paris.png';
 import seoul from './seoul.png';
@@ -39,9 +39,9 @@ const items = [
 
 export default () => (
   <Wrap>
-    <Header link="#">Featured destinations</Header>
+    <Header>Featured destinations</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Item className="col-md-2 col-sm-3 col-xs-4" destination={item} />)}
+      {items.map(item => <Card className="col-md-2 col-sm-3 col-xs-4" destination={item} />)}
     </Slider>
   </Wrap>
 );

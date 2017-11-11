@@ -15,7 +15,7 @@ const List = styled.div`
   justify-content: flex-end;
   width: 100%;
 `;
-const Item = styled.div`display: inline;`;
+const LinkBox = styled.div`display: inline;`;
 const Link = styled.a`
   line-height: 24px;
   font-size: 14px;
@@ -35,9 +35,9 @@ export default props => (
   <Box className={props.className}>
     <List>
       {actions.map(action => (
-        <Item>
+        <LinkBox>
           <Link href="#">{action}</Link>
-        </Item>
+        </LinkBox>
       ))}
     </List>
   </Box>

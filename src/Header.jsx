@@ -13,6 +13,7 @@ const SeeAll = styled.a`
   float: right;
   height: 100%;
   line-height: 34px;
+  font-weight: normal;
   font-size: 14px;
   vertical-align:middle;
   color: #383838;

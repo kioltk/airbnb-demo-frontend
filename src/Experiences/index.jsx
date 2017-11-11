@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrap from './../Wrap';
-import Item from './Item';
+import Card from './Card';
 import forest from './forest.png';
 import mountain from './mountain.png';
 import salsa from './salsa.png';
@@ -43,7 +43,7 @@ export default () => (
   <Wrap>
     <Header link="#">Experiences</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Item className="col-md-3 col-sm-4 col-xs-6" experience={item} />)}
+      {items.map(item => <Card className="col-md-3 col-sm-4 col-xs-6" experience={item} />)}
     </Slider>
   </Wrap>
 );

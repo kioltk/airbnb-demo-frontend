@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Item = styled.a`color: #383838;`;
+const Card = styled.a`color: #383838;`;
 const Image = styled.img`
   display: block;
   width: 100%;
 `;
-const Title = styled.div`
+const Title = styled.p`
   margin-top: 8px;
   margin-bottom: 6px;
   font-weight: bold;
@@ -14,8 +14,8 @@ const Title = styled.div`
   font-size: 18px;
 `;
 export default ({ destination, ...props }) => (
-  <Item href="#" className={props.className}>
+  <Card href="#" className={props.className}>
     <Image src={destination.image} />
     <Title>{destination.title}</Title>
-  </Item>
+  </Card>
 );

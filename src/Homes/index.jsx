@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrap from './../Wrap';
-import Item from './Item';
+import Card from './Card';
 import dreamy from './dreamy.png';
 import bedroom from './private.png';
 import salentina from './salentina.png';
@@ -44,7 +44,7 @@ export default () => (
   <Wrap>
     <Header link="#">Homes</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Item className="col-md-4 col-sm-5 col-xs-8" home={item} />)}
+      {items.map(item => <Card className="col-md-4 col-sm-5 col-xs-8" home={item} />)}
     </Slider>
   </Wrap>
 );

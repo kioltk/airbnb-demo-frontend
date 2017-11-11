@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Item = styled.a`color: #383838;`;
+const Card = styled.a`color: #383838;`;
 const Image = styled.img`
   display: block;
   width: 100%;
@@ -29,10 +29,10 @@ const Price = styled.p`
   opacity: 0.9;
 `;
 export default ({ reservation, ...props }) => (
-  <Item href="#" className={props.className}>
+  <Card href="#" className={props.className}>
     <Image src={reservation.image} />
     <Category>{reservation.category}</Category>
     <Title>{reservation.title}</Title>
     <Price>About ${reservation.price} per person</Price>
-  </Item>
+  </Card>
 );

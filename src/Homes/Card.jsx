@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Stars from './../Stars';
 
-const Item = styled.a`color: #383838;`;
+const Card = styled.a`color: #383838;`;
 const Image = styled.img`
   display: block;
   width: 100%;
@@ -28,7 +28,7 @@ const Price = styled.span``;
 const ReviewsCounter = styled.span`margin-left: 4px;`;
 const Rating = styled.p`margin: 0;`;
 export default ({ home, ...props }) => (
-  <Item href="#" className={props.className}>
+  <Card href="#" className={props.className}>
     <Image src={home.image} />
     <Title>
       <Price>${home.price} </Price>
@@ -43,5 +43,5 @@ export default ({ home, ...props }) => (
         {home.reviewsCounter} {home.isSuperhost ? '· Superhost' : 'reviews'}
       </ReviewsCounter>
     </Rating>
-  </Item>
+  </Card>
 );

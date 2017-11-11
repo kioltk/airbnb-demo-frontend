@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrap from './../Wrap';
-import Item from './Item';
+import Card from './Card';
 import german from './german.png';
 import korean from './korean.png';
 import seafood from './seafood.png';
@@ -39,7 +39,7 @@ export default () => (
   <Wrap>
     <Header link="#">Popular reservations around the world</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Item className="col-md-3 col-sm-4 col-xs-6" reservation={item} />)}
+      {items.map(item => <Card className="col-md-3 col-sm-4 col-xs-6" reservation={item} />)}
     </Slider>
   </Wrap>
 );
