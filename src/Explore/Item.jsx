@@ -23,7 +23,7 @@ const Image = styled.img`
   object-fit: cover;
   display: block;
   height: 78px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 3px 3px 0 0;
   ${Media.sm`
     border-radius: 4px 0 0 4px;
     height: 74px;
