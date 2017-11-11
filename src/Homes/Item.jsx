@@ -13,6 +13,7 @@ const Title = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-weight: bold;
 `;
 
 const Description = styled.div`
@@ -21,8 +22,9 @@ const Description = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-weight: lighter;
 `;
-const Price = styled.span`font-weight: bold;`;
+const Price = styled.span``;
 const ReviewsCounter = styled.span`margin-left: 4px;`;
 export default (props) => {
   const home = props.home;

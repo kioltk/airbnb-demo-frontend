@@ -14,6 +14,7 @@ const Title = styled.li`
   font-size: 15px;
   margin-bottom: 16px;
   margin-top: 48px;
+  color: #383838;
 `;
 
 export default (props) => {

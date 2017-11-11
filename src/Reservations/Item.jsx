@@ -25,6 +25,8 @@ const Title = styled.div`
 const Price = styled.div`
   font-size: 18px;
   margin-top: 4px;
+  font-weight: lighter;
+  opacity: 0.9;
 `;
 export default (props) => {
   const reservation = props.reservation;
