@@ -10,20 +10,14 @@ import Reservations from './Reservations';
 import Destinations from './Destinations';
 import Footer from './Footer';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Navigation />
-        <Explore />
-        <Experiences />
-        <Homes />
-        <Reservations />
-        <Destinations />
-        <Footer />
-      </div>
-    );
-  }
-}
-
-export default App;
+export default () => (
+  <div className="App">
+    <Navigation />
+    <Explore />
+    <Experiences />
+    <Homes />
+    <Reservations />
+    <Destinations />
+    <Footer />
+  </div>
+);
