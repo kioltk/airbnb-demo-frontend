@@ -20,7 +20,7 @@ const Next = styled.a`
   background-size: 25%;
 
   display: none;
-  ${Media.md`
+  ${Media.lg`
     display: block;
     `};
 `;

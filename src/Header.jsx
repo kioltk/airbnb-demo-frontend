@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import arrow from './arrow.svg';
+import Media from './Media';
 
 const Box = styled.div`
   display: flex;
@@ -10,7 +11,8 @@ const Title = styled.h2`
   line-height: 34px;
   font-size: 32px;
   color: #383838;
-  margin-top: 48px;
+  margin-top: 32px;
+  ${Media.sm`margin-top:40px;`};
 `;
 const SeeAll = styled.a`
   height: 100%;

@@ -17,7 +17,7 @@ export default () => (
   <Wrap>
     <Header>Explore Aribnb</Header>
     <Slider>
-      {items.map(item => <Card explore={item} className="col-md-4 col-sm-5 col-xs-6" />)}
+      {items.map(item => <Card explore={item} className="col-lg-4 col-sm-5 col-xs-6" />)}
     </Slider>
   </Wrap>
 );

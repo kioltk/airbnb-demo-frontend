@@ -5,7 +5,7 @@ import Media from './../Media';
 const Box = styled.div`
   display: none;
   align-items: center;
-  ${Media.md`
+  ${Media.lg`
     display: flex;
     `};
 `;

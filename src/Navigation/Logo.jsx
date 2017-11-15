@@ -10,6 +10,10 @@ const Logo = styled.img`
   vertical-align: middle;
 `;
 const Link = styled.a`
+  flex-wrap: nowrap;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
   &:after {
     display: inline-block;
     width: 10px;
@@ -17,12 +21,11 @@ const Link = styled.a`
     content: ' ';
     background: url(${arrow}) no-repeat;
   }
-  ${Media.md`&:after{display: none;}`};
+  ${Media.lg`&:after{display: none;}`};
 `;
 const Box = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
 `;
 
 export default props => (

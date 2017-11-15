@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Stars from './../Stars';
 
-const Card = styled.a`color: #383838;`;
+const Card = styled.a`
+  color: #383838;
+  display: block;
+  margin-bottom: 8px;
+`;
 const Image = styled.img`
   display: block;
   width: 100%;

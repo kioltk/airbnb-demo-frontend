@@ -2,7 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Media from './../Media';
 
-const Link = styled.a``;
+const Link = styled.a`
+  display: block;
+  margin-bottom: 8px;
+  color: #383838;
+`;
 const Box = styled.div`
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
@@ -33,7 +37,7 @@ const Text = styled.div`
   margin: 0;
   line-height: normal;
   font-size: 17px;
-  color: #383838;
+
   ${Media.sm`
     height: auto;
     padding: 24px;  
