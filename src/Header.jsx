@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import arrow from './arrow.svg';
 import Media from './Media';
@@ -14,7 +15,7 @@ const Title = styled.h2`
   margin-top: 32px;
   ${Media.sm`margin-top:40px;`};
 `;
-const SeeAll = styled.a`
+const SeeAll = styled(Link)`
   height: 100%;
   font-weight: normal;
   font-size: 14px;
@@ -36,6 +37,6 @@ const SeeAll = styled.a`
 export default props => (
   <Box>
     <Title className="col-xs">{props.children}</Title>
-    {props.link && <SeeAll href={props.link}>See all</SeeAll>}
+    {props.link && <SeeAll to={props.link}>See all</SeeAll>}
   </Box>
 );
