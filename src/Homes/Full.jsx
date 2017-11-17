@@ -14,7 +14,7 @@ import Filters from './Filters';
 import Pager from './Pager';
 import Media from './../Media';
 
-const Map = styled(GoogleMap)`
+const MapContainer = styled.div`
   background: red;
   position: fixed;
   right: 0;
@@ -122,13 +122,13 @@ export default () => (
   <div>
     <Navigation searchPlaceholder="Anywhere  ·  Homes" />
     <Filters />
-    <div>
-      <Map
-        apiKey="AIzaSyC-BebC7ChnHPzxQm7DAHYFMCqR5H3Jlps"
+    <MapContainer>
+      <GoogleMap
+        apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}
         defaultZoom={8}
         defaultCenter={{ lat: -34.397, lng: 150.644 }}
       />
-    </div>
+    </MapContainer>
     <Wrap className="row">
       <div className="col-lg-8 col-xs-12">
         <List>{items.map(item => <GridCard className="col-sm-6 col-xs-12" home={item} />)}</List>
