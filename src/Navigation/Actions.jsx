@@ -27,7 +27,7 @@ const Link = styled.a`
   color: #383838;
   min-width: 56px;
   display: inline-block;
-  font-weight: light;
+
   &:first-child {
     margin-left: 0;
   }

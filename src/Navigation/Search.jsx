@@ -14,6 +14,9 @@ const SearchField = styled.input`
   border-radius: 4px;
   color: #383838;
   padding-left: 48px;
+  &::placeholder {
+    color: #383838;
+  }
   ${Media.sm`padding-left: 54px;`};
 `;
 

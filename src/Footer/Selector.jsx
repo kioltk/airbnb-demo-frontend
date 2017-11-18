@@ -18,7 +18,8 @@ const Select = styled.select`
   ${Media.sm`width: 100%;`};
   background: url("${arrow}") no-repeat;
   background-position: calc(100% - 12px ) 50%;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: lighter;
 `;
 const Box = styled.div``;
 export default props => (

@@ -3,7 +3,9 @@ a {
 }
 
 body,
-button {
+button,
+select,
+input {
   font-family: CircularAir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @font-face {

@@ -66,6 +66,7 @@ const Action = styled.button`
   font-size: 16px;
   background: transparent;
   border: none;
+  cursor: pointer;
   ${Media.sm`
     height: 64px;
     width: 110px;
