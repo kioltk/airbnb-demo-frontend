@@ -50,10 +50,12 @@ class Filters extends React.Component {
               />
 
               <RoomFilter
+                className="hidden-md hidden-sm hidden-xs"
                 closeDropdown={() => this.setDropdown(null)}
                 onApply={room => this.setState({ room })}
               />
               <PriceFilter
+                className="hidden-md hidden-sm hidden-xs"
                 closeDropdown={() => this.setDropdown(null)}
                 onApply={(startPrice, endPrice) => this.setState({ startPrice, endPrice })}
               />
@@ -64,7 +66,6 @@ class Filters extends React.Component {
               />
 
               <MoreFilter
-                className="hidden-md hidden-sm hidden-xs"
                 closeDropdown={() => this.setDropdown(null)}
                 onApply={more => this.setState({ more })}
               />

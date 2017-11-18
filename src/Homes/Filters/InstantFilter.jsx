@@ -33,6 +33,7 @@ export default class extends React.Component {
   render() {
     return (
       <Filter
+        className={this.props.className}
         label={formatInstantLabel(this.state)}
         onCancel={this.onCancel}
         onToggle={this.onToggle}
