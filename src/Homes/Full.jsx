@@ -152,6 +152,7 @@ const ListToggler = styled.button`
   background-repeat: no-repeat;
   background-position: 10px 50%;
   left: calc(50% - 60px);
+  ${Media.lg`display:none;`};
 `;
 const Footer = styled.div`
   padding-top: 8px;
