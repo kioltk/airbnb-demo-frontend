@@ -8,14 +8,14 @@ import Wrap from './../Wrap';
 const Navigation = styled.nav`
   background: white;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   left: 0px;
   right: 0px;
   position: fixed;
   height: 80px;
   display: flex;
   align-items: center;
-  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.3);
+  border-bottom: 1px solid rgba(72, 72, 72, 0.3);
 `;
 const Box = styled.div`display: flex;`;
 const Offset = styled.div`height: 80px;`;

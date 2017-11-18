@@ -8,25 +8,10 @@ import Card from './Card';
 import dreamy from './dreamy.png';
 import bedroom from './private.png';
 import salentina from './salentina.png';
-import Header from './../Header';
-import Slider from './../Slider';
 import Filters from './Filters';
 import Pager from './Pager';
-import Media from './../Media';
-
-const MapContainer = styled.div`
-  background: red;
-  position: fixed;
-  right: 0;
-  top: calc(80px + 56px);
-  bottom: 0;
-
-  display: none;
-  ${Media.lg`left: calc(100% / 12 * 8);display: block`};
-  ${Media.xl`left: calc((1200px) / 12 * 8 + (100% - 1200px) / 2);`};
-  
-  1
-`;
+import Media, { DesktopOnly, isDesktop } from './../Media';
+import location from './location.svg';
 
 const items = [
   {
@@ -113,31 +98,111 @@ const ResultsTip = styled.p`
 `;
 const SearchTip = styled.p`
   margin-top: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   text-align: center;
   font-size: 16px;
   color: #636363;
 `;
-export default () => (
-  <div>
-    <Navigation searchPlaceholder="Anywhere  ·  Homes" />
-    <Filters />
-    <MapContainer>
-      <GoogleMap
-        apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}
-        defaultZoom={8}
-        defaultCenter={{ lat: -34.397, lng: 150.644 }}
-      />
-    </MapContainer>
-    <Wrap className="row">
-      <div className="col-lg-8 col-xs-12">
-        <List>{items.map(item => <GridCard className="col-sm-6 col-xs-12" home={item} />)}</List>
-        <Pager />
-        <ResultsTip>1 – 18 of 300+ Rentals</ResultsTip>
-        <SearchTip>
-          Enter dates to see full pricing. Additional fees apply. Taxes may be added.
-        </SearchTip>
+const MapToggler = styled.a`
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-left: auto;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(72, 72, 72, 0.16);
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.16);
+  border-radius: 20px;
+  background: url(${location});
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  ${Media.md`
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  `};
+  ${Media.lg`
+    display: none;
+  `};
+`;
+// SC cant style GoogleMap component, so we have to create container for it
+const GoogleMapContainer = styled.div`
+  background: lightgrey;
+  position: fixed;
+  right: 0;
+  top: calc(80px + 56px);
+  bottom: 0;
+  left: 0;
+
+  display: ${props => (props.showingMap ? 'block' : 'none')};
+  ${Media.lg`left: calc(100% / 12 * 8);display: block`};
+  ${Media.xl`left: calc((1200px) / 12 * 8 + (100% - 1200px) / 2);`};
+`;
+const ListToggler = styled.button`
+  background: white;
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
+  position: fixed;
+  bottom: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+  padding: 8px 12px 8px 32px;
+  background-image: url(${location});
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+  left: calc(50% - 60px);
+`;
+const Footer = styled.div`
+  padding-top: 8px;
+  margin-bottom: 24px;
+  position: relative;
+`;
+export default class extends React.Component {
+  state = {
+    showingMap: isDesktop,
+    showingList: true,
+  };
+  showMap = () => {
+    this.setState({ showingMap: true, showingList: false });
+  };
+  showList = () => {
+    this.setState({ showingMap: false, showingList: true });
+  };
+
+  render() {
+    return (
+      <div>
+        <Navigation searchPlaceholder="Anywhere  ·  Homes" />
+        <Filters />
+        {this.state.showingMap && (
+          <GoogleMapContainer showingMap={this.state.showingMap}>
+            <GoogleMap
+              apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}
+              defaultZoom={8}
+              defaultCenter={{ lat: -34.397, lng: 150.644 }}
+            />
+            <ListToggler onClick={this.showList}>Open list</ListToggler>
+          </GoogleMapContainer>
+        )}
+        {this.state.showingList && (
+          <Wrap>
+            <div className="col-lg-8 col-xs-12">
+              <List>
+                {items.map(item => <GridCard className="col-sm-6 col-xs-12" home={item} />)}
+              </List>
+              <Footer>
+                <Pager />
+                <ResultsTip>1 – 18 of 300+ Rentals</ResultsTip>
+                <SearchTip>
+                  Enter dates to see full pricing. Additional fees apply. Taxes may be added.
+                </SearchTip>
+                <MapToggler onClick={this.showMap} />
+              </Footer>
+            </div>
+          </Wrap>
+        )}
       </div>
-    </Wrap>
-  </div>
-);
+    );
+  }
+}

@@ -2,7 +2,8 @@ a {
   text-decoration: none;
 }
 
-body {
+body,
+button {
   font-family: CircularAir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @font-face {
@@ -26,4 +27,7 @@ body {
   font-weight: lighter;
   src: url("fonts/Circular_Air-Light.woff") format("woff"),
     url("fonts/Circular_Air-Light.ttf") format("truetype");
+}
+.CalendarDay__blocked_calendar {
+  background: red;
 }
