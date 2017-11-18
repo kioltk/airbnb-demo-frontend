@@ -3,9 +3,9 @@ import moment from 'moment';
 import styled from 'styled-components';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-import { DayPickerRangeController, DateRangePicker } from 'react-dates';
+import { DayPickerRangeController } from 'react-dates';
 import './_datepicker.css';
-import Media, { TabletFrom, MobileOnly, DesktopOnly, TabletOnly } from './../../Media';
+import Media, { MobileOnly, DesktopOnly, TabletOnly } from './../../Media';
 // The only good way to style this picker is to use css file. Im sory about it
 
 const Box = styled.div`

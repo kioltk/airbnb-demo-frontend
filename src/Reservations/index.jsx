@@ -37,7 +37,7 @@ const items = [
 
 export default () => (
   <Wrap>
-    <Header link="#">Popular reservations around the world</Header>
+    <Header to="#">Popular reservations around the world</Header>
     <Slider paginationEnabled>
       {items.map(item => <Card className="col-lg-3 col-sm-4 col-xs-6" reservation={item} />)}
     </Slider>

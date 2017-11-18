@@ -22,7 +22,9 @@ const Button = styled.button`
     margin-right: 0px;
   }
 `;
+
 const DropdownHolder = styled.div`position: relative;`;
+
 const DropdownWindow = onClickOutside(styled.div`
   position: absolute;
   top: 8px;
@@ -44,7 +46,9 @@ const DropdownWindow = onClickOutside(styled.div`
     box-shadow: none;
   `};
 `);
+
 const Actions = styled.div`
+  display: flex;
   ${Media.mobile`
     position: fixed;
     background: white;
@@ -52,26 +56,37 @@ const Actions = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
   `};
 `;
+
 const Action = styled.button`
-  height: 64px;
-  width: 110px;
+  padding: 16px;
+  min-width: 16px;
+  height: 48px;
   font-size: 16px;
   background: transparent;
   border: none;
+  ${Media.sm`
+    height: 64px;
+    width: 110px;
+    padding:0;
+  `};
 `;
-const Cancel = styled(Action)`color: #636363;`;
+
+const Cancel = styled(Action)`
+  color: #636363;
+  background-image: url(${close});
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  ${Media.sm`background: none;`};
+`;
 const Apply = styled(Action)`
   margin-left: auto;
   color: #0f7276;
+  padding-right: 8px;
+  ${Media.sm`padding:0`};
 `;
-const CancelImage = styled.img`
-  padding: 16px 8px;
-  width: 16px;
-  height: 16px;
-`;
+
 const ResetButton = styled.button`
   background: transparent;
   border: none;
@@ -79,11 +94,14 @@ const ResetButton = styled.button`
   height: 100%;
   padding-right: 8px;
 `;
+
 const ActionTitle = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${Media.sm`display:none;`};
 `;
+
 const DropdownContentHolder = styled.div`
   ${Media.mobile`
     position: relative;
@@ -91,6 +109,7 @@ const DropdownContentHolder = styled.div`
     width: 100%;
   `};
 `;
+
 const DropdownContentBox = styled.div`
   ${Media.mobile`
     position: absolute;
@@ -100,31 +119,32 @@ const DropdownContentBox = styled.div`
     left: 0;
   `};
 `;
+
 export default class extends React.Component {
   state = {
-    text: this.props.text,
     selected: false,
   };
+
   onClick = () => {
-    console.log(`Toggled ${this.props.label}`);
+    this.props.onToggle(!this.state.selected);
     this.setState({ selected: !this.state.selected });
-    this.props.onToggle(this);
   };
+
   onCancel = () => {
-    console.log(`Canceled ${this.props.label}`);
-    this.props.onCancel(this);
+    this.props.onCancel();
     this.setState({ selected: false });
   };
+
   onApply = () => {
-    console.log(`Applied ${this.props.label}`);
-    this.props.onApply(this);
+    this.props.onApply();
     this.setState({ selected: false });
   };
-  onClickOutside = (evt) => {
-    console.log(`Clicked ${this.props.label} outside`);
-    this.props.onCancel(this);
+
+  onClickOutside = () => {
+    this.props.onCancel();
     this.setState({ selected: false });
   };
+
   render() {
     return (
       <div className={this.props.className}>
@@ -133,27 +153,25 @@ export default class extends React.Component {
           onClick={this.onClick}
           selected={this.state.selected}
         >
-          {this.props.text() ? this.props.text() : this.props.label}
+          {this.props.label}
         </Button>
         <DropdownHolder>
           {this.state.selected && (
             <DropdownWindow eventTypes="click" handleClickOutside={this.onClickOutside}>
-              <MobileOnly>
-                <Actions>
-                  <CancelImage src={close} onClick={this.onCancel} />
-                  <ActionTitle className="col-xs">{this.props.label}</ActionTitle>
-                  <ResetButton onClick={this.onReset}>Reset</ResetButton>
-                </Actions>
-              </MobileOnly>
               <DropdownContentHolder>
                 <DropdownContentBox>{this.props.children}</DropdownContentBox>
               </DropdownContentHolder>
-              <TabletFrom>
-                <Actions>
-                  <Cancel onClick={this.onCancel}>Cancel</Cancel>
-                  <Apply onClick={this.onApply}>Apply</Apply>
-                </Actions>
-              </TabletFrom>
+
+              <Actions>
+                <Cancel onClick={this.onCancel}>
+                  <TabletFrom>Cancel</TabletFrom>
+                </Cancel>
+                <ActionTitle className="col-xs">{this.props.label}</ActionTitle>
+                <Apply onClick={this.onApply}>
+                  <TabletFrom>Apply</TabletFrom>
+                  <MobileOnly>Reset</MobileOnly>
+                </Apply>
+              </Actions>
             </DropdownWindow>
           )}
         </DropdownHolder>

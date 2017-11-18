@@ -8,6 +8,7 @@ const Box = styled.div`
   display: flex;
   align-items: center;
 `;
+
 const Title = styled.h2`
   line-height: 34px;
   font-size: 32px;
@@ -15,6 +16,7 @@ const Title = styled.h2`
   margin-top: 32px;
   ${Media.sm`margin-top:40px;`};
 `;
+
 const SeeAll = styled(Link)`
   height: 100%;
   font-weight: normal;
@@ -34,9 +36,9 @@ const SeeAll = styled(Link)`
   }
 `;
 
-export default props => (
+export default ({ to, ...props }) => (
   <Box>
     <Title className="col-xs">{props.children}</Title>
-    {props.link && <SeeAll to={props.link}>See all</SeeAll>}
+    {to && <SeeAll to={to}>See all</SeeAll>}
   </Box>
 );

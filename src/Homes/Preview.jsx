@@ -41,9 +41,9 @@ const items = [
 ];
 export default () => (
   <Wrap>
-    <Header link="/homes">Homes</Header>
+    <Header to="/homes">Homes</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Card className="col-lg-4 col-sm-5 col-xs-8" home={item} />)}
+      {items.map(item => <Card className="col-xs-8 col-sm-5 col-lg-4" home={item} />)}
     </Slider>
   </Wrap>
 );
