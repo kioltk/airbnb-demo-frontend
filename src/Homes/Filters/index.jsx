@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Wrap from './../../Wrap';
-// import Media from './../../Media';
-import Filter from './Filter';
-import DatePicker from './DatePicker';
 import DateFilter from './DateFilter';
+import PriceFilter from './PriceFilter';
+import GuestsFilter from './GuestsFilter';
+import InstantFilter from './InstantFilter';
+import MoreFilter from './MoreFilter';
+import RoomFilter from './RoomFilter';
 
 const Fixed = styled.div`
   border-bottom: 0.5px solid rgba(72, 72, 72, 0.3);
@@ -42,89 +44,30 @@ class Filters extends React.Component {
                 closeDropdown={() => this.setDropdown(null)}
                 onApply={(startDate, endDate) => this.setState({ startDate, endDate })}
               />
-              {/* <Button
-                selected={this.state.dropdown === 'guests'}
-                onToggle={() => this.setDropdown('guests')}
-                onCancel={() => {
-                  this.setDropdown(null);
-                }}
-                onApply={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                label="Guests"
-                text=""
-              >
-                Hello, i am dropdown from guests!
-              </Button>
-              <Button
-                selected={this.state.dropdown === 'room'}
-                onToggle={() => this.setDropdown('room')}
-                className="hidden-md hidden-sm hidden-xs"
-                onCancel={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                onApply={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                label="Room type"
-                text=""
+              <GuestsFilter
+                closeDropdown={() => this.setDropdown(null)}
+                onApply={guests => this.setState({ guests })}
               />
-              <Button
-                className="hidden-md hidden-sm hidden-xs"
-                selected={this.state.dropdown === 'price'}
-                onToggle={() => this.setDropdown('price')}
-                onCancel={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                onApply={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                label="Price"
-                text=""
+
+              <RoomFilter
+                closeDropdown={() => this.setDropdown(null)}
+                onApply={room => this.setState({ room })}
               />
-              <Button
-                className="hidden-md hidden-sm hidden-xs"
-                selected={this.state.dropdown === 'instant'}
-                onToggle={() => this.setDropdown('instant')}
-                onCancel={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                onApply={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                label="Instant book"
-                text=""
+              <PriceFilter
+                closeDropdown={() => this.setDropdown(null)}
+                onApply={(startPrice, endPrice) => this.setState({ startPrice, endPrice })}
               />
-              <Button
-                selected={this.state.dropdown === 'filters'}
-                onToggle={() => this.setDropdown('filters')}
-                onCancel={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                onApply={() => {
-                  this.setState(prevState => ({
-                    dropdown: null,
-                  }));
-                }}
-                label="More filters"
-                text=""
-              /> */}
+              <InstantFilter
+                className="hidden-md hidden-sm hidden-xs"
+                closeDropdown={() => this.setDropdown(null)}
+                onApply={instant => this.setState({ instant })}
+              />
+
+              <MoreFilter
+                className="hidden-md hidden-sm hidden-xs"
+                closeDropdown={() => this.setDropdown(null)}
+                onApply={more => this.setState({ more })}
+              />
             </Box>
           </Wrap>
         </Fixed>

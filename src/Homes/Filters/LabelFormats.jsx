@@ -3,6 +3,7 @@ export const formatCheckinLabel = state =>
 export const formatCheckoutLabel = state =>
   (state.selectedEndDate ? state.selectedEndDate.format('MMM Do') : 'Check out');
 export const formatDateLabel = (state) => {
+  console.log('Last fixes', state);
   if (state.selected) {
     return `${formatCheckinLabel(state)} — ${formatCheckoutLabel(state)} `;
   }
@@ -11,3 +12,9 @@ export const formatDateLabel = (state) => {
       (state.selectedEndDate ? ` —  ${state.selectedEndDate.format('MMM Do')}` : '') || 'Dates'
   );
 };
+
+export const formatPriceLabel = () => 'Price';
+export const formatInstantLabel = () => 'Instant booking';
+export const formatGuestsLabel = () => 'Guests';
+export const formatRoomLabel = () => 'Room type';
+export const formatMoreLabel = () => 'More filters';

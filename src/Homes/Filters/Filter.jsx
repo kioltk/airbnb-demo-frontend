@@ -81,19 +81,12 @@ const Cancel = styled(Action)`
   background-position: 50% 50%;
   ${Media.sm`background: none;`};
 `;
+
 const Apply = styled(Action)`
   margin-left: auto;
   color: #0f7276;
   padding-right: 8px;
   ${Media.sm`padding:0`};
-`;
-
-const ResetButton = styled.button`
-  background: transparent;
-  border: none;
-  color: #0f7276;
-  height: 100%;
-  padding-right: 8px;
 `;
 
 const ActionTitle = styled.p`
@@ -127,7 +120,11 @@ export default class extends React.Component {
   };
 
   onClick = () => {
-    this.props.onToggle(!this.state.selected);
+    if (!this.state.selected) {
+      this.props.onToggle(true);
+    } else {
+      this.onApply();
+    }
     this.setState({ selected: !this.state.selected });
   };
 

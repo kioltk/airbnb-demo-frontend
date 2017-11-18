@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Wrap from './../../Wrap';
 import Filter from './Filter';
 import DatePicker from './DatePicker';
 import arrow from './arrowRight.svg';
@@ -52,12 +51,13 @@ export default class extends React.Component {
     });
   };
   onToggle = (selected) => {
-    selected => this.setState({ selected });
+    this.setState({ selected });
   };
 
   render() {
     return (
       <Filter
+        className={this.props.className}
         label={formatDateLabel(this.state)}
         onCancel={this.onCancel}
         onToggle={this.onToggle}
