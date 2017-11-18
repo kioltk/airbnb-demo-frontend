@@ -85,17 +85,21 @@ const items = [
     reviewsCounter: 364,
   },
 ];
+
 const List = styled.div`
   display: flex;
   flex-flow: wrap;
   padding-top: 24px;
 `;
+
 const GridCard = styled(Card)`margin-bottom: 40px;`;
+
 const ResultsTip = styled.p`
   font-size: 16px;
   text-align: center;
   color: #383838;
 `;
+
 const SearchTip = styled.p`
   margin-top: 40px;
   margin-bottom: 24px;
@@ -103,6 +107,7 @@ const SearchTip = styled.p`
   font-size: 16px;
   color: #636363;
 `;
+
 const MapToggler = styled.a`
   width: 40px;
   height: 40px;
@@ -139,6 +144,7 @@ const GoogleMapContainer = styled.div`
   ${Media.lg`left: calc(100% / 12 * 8);display: block`};
   ${Media.xl`left: calc((1200px) / 12 * 8 + (100% - 1200px) / 2);`};
 `;
+
 const ListToggler = styled.button`
   background: white;
   border: 1px solid rgba(72, 72, 72, 0.2);
@@ -154,6 +160,7 @@ const ListToggler = styled.button`
   left: calc(50% - 60px);
   ${Media.lg`display:none;`};
 `;
+
 const Footer = styled.div`
   padding-top: 8px;
   margin-bottom: 24px;

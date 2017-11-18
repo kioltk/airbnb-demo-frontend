@@ -16,11 +16,13 @@ const Fixed = styled.div`
   background: white;
   z-index: 10;
 `;
+
 const Box = styled.div`
   padding-top: 12px;
   padding-bottom: 12px;
   display: flex;
 `;
+
 const PickedDate = styled.span`
   font-size: 18px;
   color: ${props => (props.selected ? '#0F7276;' : '#636363')};
@@ -28,12 +30,15 @@ const PickedDate = styled.span`
   padding-bottom: 2px;
   border-bottom: 1px solid ${props => (props.selected ? '#008489' : '#ffffff')};
 `;
+
 const PickerImage = styled.img`margin: 8px;`;
+
 const PickerBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 24px;
 `;
+
 const Offset = styled.div`height: 56px;`;
 class Filters extends React.Component {
   state = {

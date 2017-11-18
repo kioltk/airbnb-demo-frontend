@@ -9,13 +9,16 @@ const Box = styled.div`
     display: flex;
     `};
 `;
+
 const List = styled.div`
   vertical-align: middle;
   display: flex;
   justify-content: flex-end;
   width: 100%;
 `;
+
 const LinkBox = styled.div`display: inline;`;
+
 const Link = styled.a`
   line-height: 24px;
   font-size: 14px;
@@ -24,6 +27,7 @@ const Link = styled.a`
   color: #383838;
   min-width: 56px;
   display: inline-block;
+  font-weight: light;
   &:first-child {
     margin-left: 0;
   }
