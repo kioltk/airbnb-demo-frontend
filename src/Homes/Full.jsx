@@ -10,7 +10,7 @@ import bedroom from './private.png';
 import salentina from './salentina.png';
 import Filters from './Filters';
 import Pager from './Pager';
-import Media, { DesktopOnly, isDesktop } from './../Media';
+import Media, { DesktopOnly, isDesktop, WindowResizeListener } from './../Media';
 import location from './location.svg';
 
 const items = [
@@ -161,10 +161,21 @@ const Footer = styled.div`
 `;
 export default class extends React.Component {
   state = {
-    showingMap: isDesktop,
+    showingMap: isDesktop(),
     showingList: true,
   };
+  onResize = (windowSize) => {
+    if (this.state.showingMap && this.state.showingList && !isDesktop()) {
+      this.showList();
+      console.log('Switching to list cause is not desktop');
+    }
+    if ((!this.state.showingMap || !this.state.showingList) && isDesktop()) {
+      this.setState({ showingMap: true, showingList: true });
+      console.log('Switching to map and list cause it is desktop');
+    }
+  };
   showMap = () => {
+    console.log('Show map!?');
     this.setState({ showingMap: true, showingList: false });
   };
   showList = () => {
@@ -203,6 +214,7 @@ export default class extends React.Component {
             </div>
           </Wrap>
         )}
+        <WindowResizeListener onResize={this.onResize} />
       </div>
     );
   }
