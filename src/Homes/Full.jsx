@@ -134,7 +134,7 @@ export default class extends React.Component {
         {this.state.showingMap && <GoogleMap onListToggle={this.showList} />}
 
         {this.state.showingList && (
-          <Wrap>
+          <Wrap className="row">
             <div className="col-xs-12 col-lg-8">
               <List>
                 {items.map(item => <GridCard className="col-xs-12 col-sm-6" home={item} />)}
