@@ -41,7 +41,7 @@ export default () => (
   <Wrap>
     <Header>Featured destinations</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Card className="col-md-2 col-sm-3 col-xs-4" destination={item} />)}
+      {items.map(item => <Card className="col-lg-2 col-sm-3 col-xs-4" destination={item} />)}
     </Slider>
   </Wrap>
 );

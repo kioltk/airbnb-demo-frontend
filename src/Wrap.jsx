@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   margin-right: auto;
   padding-right: 0px;
   padding-left: 0px;
-  ${Media.md`
+  ${Media.lg`
     padding-right: 16px;
     padding-left: 16px
   `} ${Media.xl`max-width: 1200px;`};

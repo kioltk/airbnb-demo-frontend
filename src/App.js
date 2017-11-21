@@ -1,23 +1,16 @@
+import React from 'react';
+import { Route, BrowserRouter } from 'react-router-dom';
 import 'normalize.css';
 import 'flexboxgrid2';
-import React from 'react';
 import './App.css';
-import Navigation from './Navigation';
-import Explore from './Explore';
-import Experiences from './Experiences';
+import Landing from './Landing';
 import Homes from './Homes';
-import Reservations from './Reservations';
-import Destinations from './Destinations';
-import Footer from './Footer';
 
 export default () => (
-  <div className="App">
-    <Navigation />
-    <Explore />
-    <Experiences />
-    <Homes />
-    <Reservations />
-    <Destinations />
-    <Footer />
-  </div>
+  <BrowserRouter>
+    <div className="App">
+      <Route path="/" exact component={Landing} />
+      <Route path="/homes" component={Homes} />
+    </div>
+  </BrowserRouter>
 );

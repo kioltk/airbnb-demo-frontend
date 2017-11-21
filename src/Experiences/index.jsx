@@ -41,9 +41,9 @@ const items = [
 
 export default () => (
   <Wrap>
-    <Header link="#">Experiences</Header>
+    <Header to="#">Experiences</Header>
     <Slider paginationEnabled>
-      {items.map(item => <Card className="col-md-3 col-sm-4 col-xs-6" experience={item} />)}
+      {items.map(item => <Card className="col-lg-3 col-sm-4 col-xs-6" experience={item} />)}
     </Slider>
   </Wrap>
 );
