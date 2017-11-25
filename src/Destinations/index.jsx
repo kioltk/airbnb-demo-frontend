@@ -1,5 +1,6 @@
 import React from 'react';
-import Wrap from './../Wrap';
+import styled from 'styled-components';
+import OriginalWrap from './../Wrap';
 import Card from './Card';
 import miami from './miami.png';
 import paris from './paris.png';
@@ -36,6 +37,9 @@ const items = [
     title: 'Los Angeles',
   },
 ];
+const Wrap = styled(OriginalWrap)`
+  margin-bottom: 64px;
+`;
 
 export default () => (
   <Wrap>
