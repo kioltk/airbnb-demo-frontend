@@ -6,11 +6,15 @@ import Copyright from './Copyright';
 
 const Footer = styled.div`
   border-top: 0.5px solid rgba(72, 72, 72, 0.3);
-  margin-top: 64px;
+  margin-top: 48px;
 `;
-const Box = styled.div`display: flex;`;
+const Box = styled.div`
+  display: flex;
+`;
 
-const List = styled.div`padding-bottom: 48px;`;
+const List = styled.div`
+  padding-bottom: 48px;
+`;
 const Title = styled.p`
   font-weight: bold;
   font-size: 15px;

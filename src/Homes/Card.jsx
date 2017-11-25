@@ -29,10 +29,14 @@ const Description = styled.p`
   font-weight: lighter;
 `;
 const Price = styled.span``;
-const ReviewsCounter = styled.span`margin-left: 4px;`;
-const Rating = styled.p`margin: 0;`;
+const ReviewsCounter = styled.span`
+  margin-left: 4px;
+`;
+const Rating = styled.p`
+  margin: 0;
+`;
 export default ({ home, ...props }) => (
-  <Card href="/" className={props.className}>
+  <Card href={`/homes/${home.id}`} className={props.className}>
     <Image src={home.image} />
     <Title>
       <Price>${home.price} </Price>

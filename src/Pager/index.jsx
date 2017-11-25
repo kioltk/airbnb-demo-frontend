@@ -29,7 +29,7 @@ const NextPage = styled(Page)`
   border: 1px solid #0f7276;
 `;
 export default ({ currentPage, pagesCount, ...props }) => (
-  <Pager>
+  <Pager className={props.className}>
     <CurrentPage active href="/homes">
       1
     </CurrentPage>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Pager from './Pager';
+import Pager from './../Pager';
 import location from './location.svg';
 import Media from './../Media';
 

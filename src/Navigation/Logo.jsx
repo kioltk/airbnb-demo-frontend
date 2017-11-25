@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import appLogo from './appLogo.svg';
 import arrow from './arrow.svg';
 import Media from './../Media';
-import { Link as ReactLink } from 'react-router-dom';
+import { Link as RLink } from 'react-router-dom';
 
 const Logo = styled.img`
   width: 30px;
   height: 32px;
   vertical-align: middle;
 `;
-const Link = styled(ReactLink)`
+const Link = styled(RLink)`
   flex-wrap: nowrap;
   display: flex;
   /* justify-content: center; */

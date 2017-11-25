@@ -8,7 +8,7 @@ import Slider from './../Slider';
 import Card from './Card';
 
 const items = [
-  { picture: homes, title: 'Homes' },
+  { picture: homes, title: 'Homes', link: '/homes' },
   { picture: experiences, title: 'Experiences' },
   { picture: restaurants, title: 'Restaurants' },
 ];
