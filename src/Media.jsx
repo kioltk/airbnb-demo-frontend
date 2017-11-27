@@ -37,10 +37,12 @@ const media = Object.keys(sizes).reduce((acc, sizeName) => {
 }, {});
 
 export const DesktopOnly = props => <Responsive {...props} minWidth={991} />;
-export const TabletOnly = props => <Responsive {...props} minWidth={576} maxWidth={990} />;
+export const NotDesktop = props => <Responsive {...props} maxWidth={991} />;
+export const TabletOnly = props => <Responsive {...props} minWidth={576} maxWidth={991} />;
 export const TabletFrom = props => <Responsive {...props} minWidth={576} />;
 export const MobileOnly = props => <Responsive {...props} maxWidth={576} />;
 export const MobileFrom = props => <Responsive {...props} minWidth={576} />;
+
 export const isDesktop = () => document.documentElement.clientWidth >= 991;
 
 export default media;

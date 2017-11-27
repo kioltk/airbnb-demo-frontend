@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import GoogleMap from 'google-map-react';
 import { Header as OriginalHeader, CollapsedText, Paragraph } from './../styled';
 import SpoileredContent from './../SpoileredContent';
 import Wrap from './../../../Wrap';
@@ -123,26 +122,13 @@ const SummaryLabel = styled.span`
 const NeighborhoodHeader = styled(Header)`
   margin-top: 48px;
 `;
-const MapBox = styled.div`
-  height: 192px;
-  ${Media.sm`height: 474px;`};
-  ${Media.lg`height: 612px;`};
-`;
-const MapPolygon = styled.div`
-  width: 150px;
-  height: 150px;
-  background: rgba(3, 178, 185, 0.2);
-  border: 1px solid #008489;
-  box-sizing: border-box;
-  border-radius: 50%;
-`;
 export default class extends React.Component {
   state = {};
   render() {
     return (
-      <Wrap className="col-xs">
+      <div className={this.props.className}>
         <div className="row">
-          <HostBox className="col-xs col-lg-8 row">
+          <HostBox className="">
             <Info className="col-xs-9 col-sm-10">
               <Header>Hosted by Yudy & Victoria</Header>
               <Subheader>Santa Ana, California, United States · Joined in August 2014</Subheader>
@@ -201,19 +187,7 @@ export default class extends React.Component {
             </div>
           </HostBox>
         </div>
-        <MapBox>
-          <GoogleMap
-            apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY}
-            defaultZoom={12}
-            defaultCenter={{ lat: -34.397, lng: 150.644 }}
-          >
-            <MapPolygon lat={-34.397} lng={150.644} />
-          </GoogleMap>
-        </MapBox>
-        <Paragraph className="col-xs">
-          Exact location information is provided after a booking is confirmed.
-        </Paragraph>
-      </Wrap>
+      </div>
     );
   }
 }

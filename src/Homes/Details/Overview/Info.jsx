@@ -72,14 +72,19 @@ const Type = styled.p`
 const SummaryBox = styled.div`
   display: flex;
   margin-bottom: 8px;
+  ${Media.sm`display: block;`};
 `;
 
-const SummaryItem = styled.div`
+const SummaryBlock = styled.div`
   font-size: 14px;
   font-weight: lighter;
   display: flex;
   margin-top: 16px;
   align-items: center;
+  ${Media.sm`display: inline-block;`};
+`;
+const SummaryText = styled.span`
+  vertical-align: middle;
 `;
 
 const SpoileredContent = styled(OriginalSpoileredContent)`
@@ -88,6 +93,7 @@ const SpoileredContent = styled(OriginalSpoileredContent)`
 
 const SummaryIcon = styled.img`
   margin-right: 8px;
+  vertical-align: middle;
 `;
 
 export default () => (
@@ -103,22 +109,22 @@ export default () => (
           </MobileFrom>
           <Type>Entire cabin · Armenia</Type>
           <SummaryBox className="row">
-            <SummaryItem className="col-xs-6">
+            <SummaryBlock className="col-xs-6 col-sm">
               <SummaryIcon src={guests} />
-              <span>2 guests</span>
-            </SummaryItem>
-            <SummaryItem className="col-xs-6">
+              <SummaryText>2 guests</SummaryText>
+            </SummaryBlock>
+            <SummaryBlock className="col-xs-6 col-sm">
               <SummaryIcon src={bed} />
-              <span>2 beds</span>
-            </SummaryItem>
-            <SummaryItem className="col-xs-6">
+              <SummaryText>2 beds</SummaryText>
+            </SummaryBlock>
+            <SummaryBlock className="col-xs-6 col-sm">
               <SummaryIcon src={studio} />
-              <span>Studio</span>
-            </SummaryItem>
-            <SummaryItem className="col-xs-6">
+              <SummaryText>Studio</SummaryText>
+            </SummaryBlock>
+            <SummaryBlock className="col-xs-6 col-sm">
               <SummaryIcon src={bathtub} />
-              <span>1 bath</span>
-            </SummaryItem>
+              <SummaryText>1 bath</SummaryText>
+            </SummaryBlock>
           </SummaryBox>
         </NameBox>
         <HostBox className="col-xs-3 col-sm-2 ">

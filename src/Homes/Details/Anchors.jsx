@@ -22,7 +22,7 @@ const Sticky = styled.div`
   align-items: center;
 `;
 export default props => (
-  <Wrap className="col-xs-12 col-sm-10 col-lg-8">
+  <div>
     <Sticky>
       <Anchor active href="#">
         Overview
@@ -34,5 +34,5 @@ export default props => (
       <Divider>·</Divider>
       <Anchor href="#">Location</Anchor>
     </Sticky>
-  </Wrap>
+  </div>
 );

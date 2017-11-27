@@ -7,12 +7,12 @@ import Rules from './Rules';
 import Amenities from './Amenities';
 import CommunicationRules from './CommunicationRules';
 
-export default () => (
-  <Wrap className="col-xs-12 col-lg-8">
+export default props => (
+  <div className={props.className}>
     <Info />
     <Amenities />
     <CommunicationRules />
     <Rules />
     <Cancelation />
-  </Wrap>
+  </div>
 );
