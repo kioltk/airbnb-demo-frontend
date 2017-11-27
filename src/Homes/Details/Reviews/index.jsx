@@ -86,7 +86,7 @@ export default class extends React.Component {
   };
   render() {
     return (
-      <Wrap className="col-xs-12 col-lg-8">
+      <div className={this.props.className}>
         <Box>
           <Header>
             113 Reviews<HeaderStars stars={5} />
@@ -115,7 +115,7 @@ export default class extends React.Component {
         </Box>
         {this.state.reviews.map(review => <Review review={review} />)}
         <Pager />
-      </Wrap>
+      </div>
     );
   }
 }
