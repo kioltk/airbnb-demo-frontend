@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link as RLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Media from './../Media';
 
-const Link = styled.a`
+const Link = styled(RLink)`
   display: block;
   margin-bottom: 8px;
   color: #383838;
@@ -49,7 +50,7 @@ const Text = styled.div`
   `};
 `;
 export default ({ explore, ...props }) => (
-  <Link href={explore.link} className={props.className}>
+  <Link to={explore.link} className={props.className}>
     <Box>
       <Image src={explore.picture} />
       <Text>{explore.title}</Text>

@@ -64,7 +64,7 @@ const Like = styled.img`
 `;
 
 export default ({ home, ...props }) => (
-  <Card href={`/homes/${home.id}`} className={props.className}>
+  <Card to={`/homes/${home.id}`} className={props.className}>
     <Image src={home.image} />
     <Like src={like} />
     <Description matches={home.matches}>

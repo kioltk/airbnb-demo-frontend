@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Stars from './../Stars';
 
-const Card = styled.a`
+const Card = styled(Link)`
   color: #383838;
   display: block;
   margin-bottom: 8px;
@@ -36,7 +37,7 @@ const Rating = styled.p`
   margin: 0;
 `;
 export default ({ home, ...props }) => (
-  <Card href={`/homes/${home.id}`} className={props.className}>
+  <Card to={`/homes/${home.id}`} className={props.className}>
     <Image src={home.image} />
     <Title>
       <Price>${home.price} </Price>
