@@ -3,9 +3,3 @@ node_js:
   '8'
 install: yarn install
 script: yarn build
-deploy:  
-  provider: heroku
-  api_key: $HEROKU_TOKEN
-  app: kioltk-airbnb-demo-frontend
-  on: 
-    all_branches: true
