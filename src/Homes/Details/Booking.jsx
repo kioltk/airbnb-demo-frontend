@@ -213,7 +213,7 @@ const Close = styled.button`
 `;
 export default class extends React.Component {
   state = {
-    isOpened: true,
+    isOpened: false,
   };
 
   toggleBooking = () => {
