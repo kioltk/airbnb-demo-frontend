@@ -8,9 +8,9 @@ import Slider from './../Slider';
 import Card from './Card';
 
 const items = [
-  { picture: homes, title: 'Homes' },
-  { picture: experiences, title: 'Experiences' },
-  { picture: restaurants, title: 'Restaurants' },
+  { picture: homes, title: 'Homes', link: '/homes' },
+  { picture: experiences, title: 'Experiences', link: '/experiences' },
+  { picture: restaurants, title: 'Restaurants', link: '/restaurants' },
 ];
 
 export default () => (

@@ -14,6 +14,7 @@ import GoogleMap from './GoogleMap';
 
 const items = [
   {
+    id: 1,
     image: salentina,
     price: 82,
     type: 'Entire house',
