@@ -23,7 +23,9 @@ const Button = styled.button`
   }
 `;
 
-const DropdownHolder = styled.div`position: relative;`;
+const DropdownHolder = styled.div`
+  position: relative;
+`;
 
 const DropdownWindow = onClickOutside(styled.div`
   position: absolute;

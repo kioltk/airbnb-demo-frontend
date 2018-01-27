@@ -24,7 +24,9 @@ const Box = styled.div`
   display: flex;
 `;
 
-const Offset = styled.div`height: 56px;`;
+const Offset = styled.div`
+  height: 56px;
+`;
 
 class Filters extends React.Component {
   state = {
